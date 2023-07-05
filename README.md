@@ -11,7 +11,7 @@ shell: bash, fish, csh, sh, zsh or other
 # Quick install
 ## Step 1:
 ```console
-SSPYPL_PATH=~/sspypl
+echo "export SSPYPL_PATH=~/sspypl" >> ~/.bashrc
 ```
 You can change this path to any you want
 
@@ -19,25 +19,17 @@ You can add extra slash (/) if you want (or even several slashes)
 
 ## Step 2:
 ```console
-set +o histexpand
+cp ./run_script.sh $PREFIX/bin/sspypl
 ```
-It is nessesary to properly escape shebang symbol
 
-## Step 3A:
+## Step 3:
 ```console
-echo "#!/bin/env -S python3 $SSPYPL_PATH/main.py" > "${PREFIX}"/bin/sspypl
-```
-
-## Step 3B:
-If you want to change path dynamicaly, run
-```console
-echo '#!/bin/env -S python3 $SSPYPL_PATH/main.py' > "${PREFIX}"/bin/sspypl
-```
-In that case, to set path, do [first step](Step 1) with custom path
-
-## Step 4:
-```
 chmod -v u+x "${PREFIX}"/bin/sspypl
+```
+
+## Step 4 (run):
+```console
+sspypl
 ```
 
 # Interpreter

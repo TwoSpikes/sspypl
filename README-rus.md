@@ -1,5 +1,6 @@
 # sspypl
-Simple Stupid Programming Language written on PYthon
+Simple Stupid Programming Language written on PYthon\
+простой тупой язык программирования написанный на python
 
 # Зависимости
 версия python: хз но у меня 3.11.4\
@@ -8,33 +9,25 @@ Simple Stupid Programming Language written on PYthon
 # Быстрая установка
 ## Шаг 1:
 ```console
-SSPYPL_PATH=~/sspypl
+echo "export SSPYPL_PATH=~/sspypl" >> ~/.bashrc
 ```
 Можете изменить путь на любой который захотите
 
-You can add extra slash (/) if you want (or even several slashes)
+Вы можете добавить добавочные слэши (/) (если хотите конечно) (или даже несколько)
 
 ## Шаг 2:
 ```console
-set +o histexpand
+cp ./run_script.sh ./
 ```
-Это необходимо для правильного экранирования шебанга
 
-## Шаг 3A:
+## Шаг 3:
 ```console
-echo "#!/bin/env -S python3 $SSPYPL_PATH/main.py" > "${PREFIX}"/bin/sspypl
-```
-
-## Шаг 3B:
-Если хотите динамически изменять путь к файлу `main.py` после установки:
-```console
-echo '#!/bin/env -S python3 $SSPYPL_PATH/main.py' > "${PREFIX}"/bin/sspypl
-```
-Тогда после шага 3B Вам, чтобы изменить путь, потребуется перевыполнить [Шаг 1](Шаг 1) с модифицированным путём к файлу `main.py`
-
-## Шаг 4:
-```
 chmod -v u+x "${PREFIX}"/bin/sspypl
+```
+
+## Шаг 4 (запуск):
+```console
+sspypl
 ```
 
 # Туториал по интерпретатору (его аргументами командной строки)
